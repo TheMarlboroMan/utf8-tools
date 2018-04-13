@@ -24,6 +24,8 @@ size_t utf8_size(const std::string& _c);
 //! Thanks to https://codingforspeed.com/counting-the-number-of-leading-zeros-for-a-32-bit-integer-signed-or-unsigned/ for the idea :).
 size_t count_leading_ones(char _c);
 
+//! Pops a character of a string, utf8 compatible.
+void utf8_pop(std::string&);
 }
 
 #endif

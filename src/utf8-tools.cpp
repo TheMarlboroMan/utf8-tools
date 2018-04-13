@@ -1,5 +1,7 @@
 #include "utf8-tools.h"
 
+#include <iostream> //TODO: Remove.
+
 using namespace tools;
 
 bool tools::is_utf8(char _c) {
@@ -33,4 +35,13 @@ size_t tools::count_leading_ones(char _c) {
 
 	}
 	return res;
+}
+
+void tools::utf8_pop(std::string& _s) {
+	while(_s.size()) {
+		_s.pop_back();
+		if(!is_utf8(_s.back())) {
+			break;
+		}
+	}
 }
