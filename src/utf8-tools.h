@@ -10,7 +10,6 @@ namespace tools {
 
 //! The UTF-8 marker is denoted as much 1 leftmost bits as the sequence lasts 
 //! followed by a single 0 bit.
-bool is_utf8(const std::string&);
 bool is_utf8(char _c);
 
 //!Gets the number of characters in a string containing utf8 encoded characters.

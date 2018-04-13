@@ -2,10 +2,6 @@
 
 using namespace tools;
 
-bool tools::is_utf8(const std::string& _s) {
-	return is_utf8(_s[0]);
-}
-
 bool tools::is_utf8(char _c) {
 	return _c & 128;
 }
