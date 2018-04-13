@@ -2,16 +2,20 @@
 
 using namespace tools;
 
-bool tools::is_utf8_beginning(char _c) {
+bool tools::is_utf8(const std::string& _s) {
+	return is_utf8(_s[0]);
+}
+
+bool tools::is_utf8(char _c) {
 	return _c & 128;
 }
 
-size_t tools::get_utf8_size(const std::string& _c) {
+size_t tools::utf8_size(const std::string& _c) {
 
 	size_t res=0;
 	for(size_t i=0; i < _c.size(); i++) {
 
-		if(is_utf8_beginning(_c[i])) {
+		if(is_utf8(_c[i])) {
 			++res;
 			i+=count_leading_ones(_c[i])-1;
 		}

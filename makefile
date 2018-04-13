@@ -7,7 +7,7 @@ all: objdir main.cpp $(OBJS)/utf8-tools.o
 	$(COMPILER) $(CFLAGS) $(DEBUG) main.cpp $(OBJD)utf8-tools.o -o a.out
 
 objdir:
-	mkdir $(OBJD)
+	mkdir -p $(OBJD)
 
 clean:
 	rm $(OBJD)*; rmdir $(OBJD) rm ./a.out; echo "Clean";

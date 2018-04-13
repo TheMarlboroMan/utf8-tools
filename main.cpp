@@ -9,7 +9,7 @@ int main(int argc, char ** argv) {
 	std::vector<std::string> cosas={"eñe", "ñ", "leñe", "güita", "ñeñe", "りにまね"};
 
 	for(const auto& s : cosas) {
-		std::cout<<"sizes of "<<s<<": "<<s.size()<<" vs "<<tools::get_utf8_size(s)<<std::endl;
+		std::cout<<"sizes of "<<s<<": "<<s.size()<<" vs "<<tools::utf8_size(s)<<std::endl;
 	}
 
 	return 0;
