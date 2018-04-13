@@ -12,6 +12,5 @@ objdir:
 clean:
 	rm $(OBJD)*; rmdir $(OBJD) rm ./a.out; echo "Clean";
 
-
 $(OBJS)/utf8-tools.o: src/utf8-tools.h src/utf8-tools.cpp
 	$(COMPILER) $(CFLAGS) $(DEBUG) -c src/utf8-tools.cpp -o $(OBJD)utf8-tools.o
