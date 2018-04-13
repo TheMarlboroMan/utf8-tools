@@ -12,7 +12,9 @@ int main(int argc, char ** argv) {
 		std::cout<<"sizes of "<<s<<": "<<s.size()<<" vs "<<tools::utf8_size(s)<<std::endl;
 	}
 
-	std::string remove="abñ";
+	std::string remove="abñe";
+	tools::utf8_pop(remove);
+	std::cout<<remove<<" == abñ"<<std::endl;
 	tools::utf8_pop(remove);
 	std::cout<<remove<<" == ab"<<std::endl;
 

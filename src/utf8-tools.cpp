@@ -38,10 +38,14 @@ size_t tools::count_leading_ones(char _c) {
 }
 
 void tools::utf8_pop(std::string& _s) {
-	while(_s.size()) {
+
+	if(_s.size() && !is_utf8(_s.back())) {
 		_s.pop_back();
-		if(!is_utf8(_s.back())) {
-			break;
+	}
+	else {
+		while(_s.size()) {
+			_s.pop_back();
+			if(!is_utf8(_s.back())) break;
 		}
 	}
 }
