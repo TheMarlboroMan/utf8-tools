@@ -1,0 +1,5 @@
+set(SOURCE
+   ${SOURCE}
+   ${CMAKE_CURRENT_SOURCE_DIR}/utf8-tools.cpp
+   PARENT_SCOPE
+)

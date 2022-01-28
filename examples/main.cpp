@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "src/utf8-tools.h"
+#include <tools/utf8-tools.h>
 
 int main(int argc, char ** argv) {
 
